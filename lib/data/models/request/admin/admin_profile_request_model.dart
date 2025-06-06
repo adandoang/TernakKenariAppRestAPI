@@ -4,7 +4,7 @@ class AdminProfileRequestModel {
     final String? name;
 
     AdminProfileRequestModel({
-        this.name,
+        required this.name,
     });
 
     factory AdminProfileRequestModel.fromJson(String str) => AdminProfileRequestModel.fromMap(json.decode(str));
