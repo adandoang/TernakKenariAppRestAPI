@@ -1,6 +1,8 @@
 import 'package:canary_project/core/core.dart';
 import 'package:canary_project/data/models/request/auth/login_request_model.dart';
 import 'package:canary_project/presentation/auth/bloc/login/login_bloc.dart';
+import 'package:canary_project/presentation/auth/register_screen.dart';
+import 'package:canary_project/presentation/buyer/profile/buyer_profile_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -105,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           SnackBar(content: Text(state.responseModel.message!)),
                         );
                         context.pushAndRemoveUntil(
-                          const BuyerProfilePage(),
+                          const BuyerProfileScreen(),
                           (route) => false,
                         );
                       } else {
