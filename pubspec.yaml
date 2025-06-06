@@ -38,6 +38,7 @@ dependencies:
   dropdown_button2: ^2.3.9
   http: ^1.4.0
   flutter_secure_storage: ^9.2.4
+  dartz: ^0.10.0
   
 
 dev_dependencies:
