@@ -5,7 +5,7 @@ import'package:http/http.dart' as http;
 
 class ServiceHttpClient {
 
-  final String baseUrl = 'http://10.0.0.2:8000/api/';
+  final String baseUrl = 'http://10.0.2.2:8000/api/';
   final secureStorage = FlutterSecureStorage();
 
   //post
@@ -20,6 +20,8 @@ class ServiceHttpClient {
           },
         body: json.encode(body),
       );
+
+      // _logRequest("POST", url, body, response);
       return response;
     } catch (e) {
       throw Exception('Post request failed: $e');
@@ -29,7 +31,7 @@ class ServiceHttpClient {
   //post with token
   Future<http.Response> postWithToken(String endpoint, Map<String, dynamic> body) async {
     final url = Uri.parse('$baseUrl$endpoint');
-    final token = await secureStorage.read(key: 'token');
+    final token = await secureStorage.read(key: 'authToken');
     try {
       final response = await http.post(
         url,

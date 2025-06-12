@@ -4,6 +4,7 @@ import 'package:canary_project/data/repository/get_all_burung_tersedia_repositor
 import 'package:canary_project/data/repository/profile_buyer_repository.dart';
 import 'package:canary_project/presentation/auth/bloc/login/login_bloc.dart';
 import 'package:canary_project/presentation/auth/bloc/register/register_bloc.dart';
+import 'package:canary_project/presentation/auth/login_screen.dart';
 import 'package:canary_project/presentation/bloc/get_all_burung_tersedia/get_burung_tersedia_bloc.dart';
 import 'package:canary_project/presentation/buyer/profile/bloc/profile_buyer_bloc.dart';
 import 'package:canary_project/services/service_http_client.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Splashscreen(),
+      home: const LoginScreen(),
       ),
     );
   }
